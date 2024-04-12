@@ -5,18 +5,18 @@ public class Digits
 
 	private ArrayList<Integer> digitList;
 
-	public Digits(int num)
-	{  
-	    digitList = new arrayList <Integer>();
-if(num == 0){
-	digitList.add(0); 
-} else {
-	while(num > 0){
-		digitList.add(0, num%10);
-		num = num/10;
-	}
+	public Digits(int num) {
+    digitList = new ArrayList<Integer>();
+    
+    if (num == 0) {
+        digitList.add(0);
+    } else {
+        while (num > 0) {
+            digitList.add(0, num % 10);
+            num = num / 10;
+        }
+    }
 }
-	}
 
 	public boolean isStrictlyIncreasing()
 	{ 
@@ -24,9 +24,9 @@ if(num == 0){
 			if(digitList.get(i) >= digitList.get(i + 1)){
 				return false;
 			}
-return true;
+		}
+return true;	
 	}
-	
 	public String toString()
 	{
 		return digitList.toString();
